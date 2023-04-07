@@ -29,7 +29,7 @@ class TestPlace(unittest.TestCase):
     @classmethod
     def teardown(cls):
         """at the end of the test this will tear it down"""
-        del cls.place
+        cls.place
 
     def tearDown(self):
         """teardown"""
@@ -83,7 +83,8 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(type(self.place.longitude), float)
         self.assertEqual(type(self.place.amenity_ids), list)
 
-    @unittest.skipIf(os.getenv("HBNB_TYPE_STORAGE") == "db", "No apply for db")
+    @unittest.skipIf(os.environ['HBNB_TYPE_STORAGE'] == 'db',
+                     'Invalid storage mode')
     def test_save_Place(self):
         """test if the save works"""
         self.place.save()

@@ -1,26 +1,42 @@
 #!/usr/bin/python3
-"""test for console"""
+"""test for file storage"""
 import unittest
-from unittest.mock import patch
-from io import StringIO
-from console import HBNBCommand
-from models.base_model import BaseModel, Base
-from models.user import User
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.review import Review
-from models.engine.db_storage import DBStorage
-import MySQLdb
-from unittest.mock import patch
-import os
-from os import environ
+import pep8
 
 
-@unittest.skipIf(os.getenv("HBNB_TYPE_STORAGE") != "db", "No apply for db")
-class TestDataBase(unittest.TestCase):
-    """this will test the console"""
-    def test_db(self):
-        """ test database """
+class TestDBStorage(unittest.TestCase):
+    '''Tests the DBStorage storage engine'''
+
+    def setUp(self):
+        """SetUp env for test"""
         pass
+
+    def tearDown(self):
+        """teardown"""
+        pass
+
+    def test_all(self):
+        """Test class method all()"""
+        pass
+
+    def test_new(self):
+        """Test new method"""
+        pass
+
+    def test_save(self):
+        """Test save method
+        """
+        pass
+
+    def test_delete(self):
+        """Tests delete
+        """
+        pass
+
+    def test_reload(self):
+        """Tests reload
+        """
+        pass
+
+if __name__ == "__main__":
+    unittest.main()
